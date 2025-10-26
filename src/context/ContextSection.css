@@ -1,0 +1,50 @@
+.context-section {
+  background: #252535;
+  border-left: 6px solid #646cff;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: left;
+  color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.context-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 0.5rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.toggle-icon {
+  font-size: 0.9rem;
+  color: #646cff;
+}
+
+.context-body {
+  max-height: 1000px;
+  transition: max-height 0.4s ease, opacity 0.4s ease, padding 0.3s ease;
+  opacity: 1;
+}
+
+.context-section.closed .context-body {
+  max-height: 0;
+  opacity: 0;
+  padding: 0;
+}
+
+.context-body ul {
+  padding-left: 1.2rem;
+}
+
+.context-body li {
+  margin-bottom: 0.5rem;
+}

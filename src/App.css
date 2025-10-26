@@ -1,0 +1,262 @@
+body {
+  margin: 0;
+  background-color: #121212;
+  color: #fff;
+  font-family: Inter, sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.user-type-selector {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section {
+  background: #1e1e1e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #333;
+  padding: 0.8rem;
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: #222;
+  color: #fff;
+}
+
+.input,
+.select {
+  border-radius: 6px;
+  border: 1px solid #333;
+  padding: 0.4rem;
+  background-color: #222;
+  color: #fff;
+}
+
+.form-row {
+  margin-top: 1rem;
+}
+
+.loader {
+  margin-top: 1rem;
+  color: #facc15;
+  font-weight: bold;
+}
+
+.success {
+  margin-top: 1rem;
+  color: #4ade80;
+  font-weight: bold;
+}
+
+.answer-container {
+  margin-top: 1rem;
+}
+
+.answer {
+  background: #333;
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.site-up-tick {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #4ade80;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px #4ade80;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+.site-up-tick::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #4ade80;
+  bottom: -10px;
+  left: -5px;
+}
+.question {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.answer-list-item {
+  margin-left: 1.5rem;
+}
+
+.answer strong {
+  color: #ffffff;
+}
+
+/* existing dark theme styles */
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.button.small {
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Thinking modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1e1e1e;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #646cff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.context-section {
+  background: #2b2b2b;
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: left;
+  color: #fff;
+}
+
+.context-section ul {
+  margin-top: 0.5rem;
+  padding-left: 1.2rem;
+}
+
+.context-section li {
+  margin-bottom: 0.5rem;
+}
+
+
+.context-section {
+  background: #252535; /* Slightly lighter than main background for contrast */
+  border-left: 6px solid #646cff; /* Vertical accent line */
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+  text-align: left;
+  color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  font-size: 1rem;
+  line-height: 1.6;
+  position: relative;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.context-section:hover {
+  transform: translateY(-2px);
+  background: #2b2b3b;
+}
+
+.context-section p {
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+.context-section ul {
+  margin-top: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.context-section li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.context-section li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #646cff;
+  font-weight: bold;
+}
+
+.context-section strong {
+  color: #ffffff;
+  font-weight: 600;
+}

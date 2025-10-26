@@ -1,0 +1,14 @@
+.loader {
+    margin-top: 10px;
+    color: #666;
+}
+
+.success {
+    margin-top: 10px;
+    color: #4CAF50;
+}
+
+.button.small {
+    font-size: 0.9em;
+    padding: 5px 10px;
+}
